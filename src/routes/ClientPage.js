@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './IndexPage.css';
-import { Layout, Button, Input, Icon } from 'antd';
+import { Layout, Button, Input, Icon, Row, Col } from 'antd';
 const { Header, Footer, Content } = Layout;
 
 function ClientPage() {
@@ -10,9 +10,11 @@ function ClientPage() {
 		<Layout>
 			<Content style={{ position: 'fixed', width: '100%', maxWidth: '680px', top: '0', bottom: '50px', background: '#eaeaea' }}>Content</Content>
 			<Footer style={{ position: 'fixed', width: '100%', maxWidth: '680px', height: '50px', bottom: '0', padding: '0' }}>
-		      		<Input style={{ height: '34px', marginTop: '7px', float: 'left', width: '80%' }} />
-		      		<Button style={{ float: 'left', height: '34px', marginTop: '7px', marginLeft:'1%' }} type="primary">发送</Button>
-		      		<Icon style={{ float: 'left', fontSize: '30px', marginTop: '8px', marginLeft:'1%' }} type="plus-circle-o" />
+				<Row gutter={8} style={{ textAlign: 'center', marginTop: '10px' }}>
+				  <Col span={17}><Input style={{ width: '95%' }} /></Col>
+				  <Col span={4}><Button style={{ width: '95%', height: '28px' }} type="primary">发送</Button></Col>
+				  <Col span={3}><Icon style={{ fontSize: '26px' }} type="plus-circle-o" /></Col>
+				</Row>  		
 			</Footer>
 		</Layout>
     </div>
