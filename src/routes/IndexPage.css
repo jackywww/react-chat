@@ -27,3 +27,6 @@
 .list code {
   background: #f7f7f7;
 }
+:global{
+	.chatpop { max-width: 90%; }
+}
