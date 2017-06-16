@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 node_modules
 .DS_Store
 .happypack
@@ -7,18 +6,10 @@ node_modules
 .project
 .settings/
 package.json
-=======
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+dist
 
-# production
-/dist
-
-# misc
 .DS_Store
 npm-debug.log*
-/public
-/mock
->>>>>>> d85067eee8df0b19f3dfbec8a33e9599bca18c85
+public
+mock
