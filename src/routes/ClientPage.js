@@ -1,11 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './IndexPage.css';
-<<<<<<< HEAD
-import { Layout, Button, Input, Icon } from 'antd';
-=======
 import { Layout, Button, Input, Icon, Row, Col } from 'antd';
->>>>>>> d85067eee8df0b19f3dfbec8a33e9599bca18c85
 const { Header, Footer, Content } = Layout;
 
 function ClientPage() {
