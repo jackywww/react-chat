@@ -3,17 +3,23 @@ import { connect } from 'dva';
 import { Layout, Button, Input, Icon, Row, Col, Avatar } from 'antd';
 const { Header, Footer, Content } = Layout;
 import styles from './IndexPage.less';
-
+var data = [0,1]
 function ClientPage() {
   return (
     <div style={{ maxWidth: '680px', width: '100%', margin: '0 auto' }}>
 		<Layout>
 			<Content style={{ position: 'fixed', width: '100%', maxWidth: '680px', top: '0', bottom: '50px', background: '#eaeaea' }}>	
-			<Row className={ styles.margin }>
-				<Col span={4}></Col>
-				<Col span={16}><div className="send right">中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中</div></Col>
-				<Col span={4} className={ styles.center }><Avatar size="large" shape="square" icon="user" /></Col>
-			</Row>
+			{
+				data.map((item) => {
+				 return (
+					<Row className={ styles.margin }>
+						<Col span={4}></Col>
+						<Col span={16}><div className="send right">中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中</div></Col>
+						<Col span={4} className={ styles.center }><Avatar size="large" shape="square" icon="user" /></Col>
+					</Row>
+					)
+				})
+			}
 			<Row className={ styles.margin }>
 				<Col span={4} className={ styles.center }><Avatar shape="square" size="large" icon="user" /></Col>
 				<Col span={16}><div className="send left">中中中中中中中中中中</div></Col>
