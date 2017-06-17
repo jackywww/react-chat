@@ -28,34 +28,43 @@
   background: #f7f7f7;
 }
 :global{
-	.chatpop { max-width: 90%; }
-	.radius{  
-	    -webkit-border-radius:10px;  
-	    -moz-border-radius:10px;
-	    border-radius:10px;  
+	.chatpop {  }
+	.send {
+		position:relative;
+		width:90%;
+		max-width: 90%;
+		min-height:35px;
+		background:#fff;
+		border-radius:5px; /* 圆角 */
+		word-wrap:break-word;
+		word-break:break-all; 
+		padding: 6px 8px;
+		margin: 8px;
 	}
-	.left:before{  
-	    position:absolute;  
-	    content:"\00a0";  
-	    width:0px;  
-	    height:0px;  
-	    border-width:8px 18px 8px 0;  
-	    border-style:solid;  
-	    border-color:transparent #A6DADC transparent transparent;  
-	    top:15px;  
-	    left:-18px;  
-	}  
-	.right:before{  
+	.right { margin-right:12px; float:right; }
+	.left { margin-left:12px; float:left; }
+	.right:after{  
 	    position:absolute;  
 	    content:"\00a0";  
 	    display:inline-block;  
 	    width:0px;  
 	    height:0px;  
-	    border-width:8px 0px 8px 18px;  
+	    border-width:3px;  
 	    border-style:solid;  
-	    border-color:transparent transparent transparent #A6DADC;  
-	    left:250px;  
-	    top:15px;  
-	                      
-	} 
+	    border-color:transparent transparent transparent #fff;  
+	    right:-6px;  
+	    top:14px;                       
+	 }
+	 .left:before{  
+	    position:absolute;  
+	    content:"\00a0";  
+	    display:inline-block;  
+	    width:0px;  
+	    height:0px;  
+	    border-width:3px 3px 3px 3px;  
+	    border-style:solid;  
+	    border-color:transparent #fff transparent transparent;  
+	    left:-6px;  
+	    top:14px;                       
+	 }
 }

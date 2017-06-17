@@ -13,7 +13,8 @@ function ClientPage() {
     <div style={{ maxWidth: '680px', width: '100%', margin: '0 auto' }}>
 		<Layout>
 			<Content style={{ position: 'fixed', width: '100%', maxWidth: '680px', top: '0', bottom: '50px', background: '#eaeaea' }}>	
-				<div className="chatpop left">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+				<div className="send right">中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中</div>
+				<div className="send left">中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中</div>
 			</Content>
 			<Footer style={{ position: 'fixed', width: '100%', maxWidth: '680px', height: '50px', bottom: '0', padding: '0' }}>
 				<Row gutter={8} style={{ textAlign: 'center', marginTop: '10px' }}>
