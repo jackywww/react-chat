@@ -27,22 +27,24 @@
 .list code {
   background: #f7f7f7;
 }
+.margin { margin: 20px 0; }
+.center { text-align: center; }
 :global{
 	.chatpop {  }
 	.send {
 		position:relative;
-		width:90%;
-		max-width: 90%;
-		min-height:35px;
+		font-size:14px;
+		line-height: 18px;
+		min-height:40px;
 		background:#fff;
 		border-radius:5px; /* 圆角 */
 		word-wrap:break-word;
 		word-break:break-all; 
-		padding: 6px 8px;
-		margin: 8px;
+		padding: 10px;
+		font-weight: 800;
 	}
-	.right { margin-right:12px; float:right; }
-	.left { margin-left:12px; float:left; }
+	.right { float:right; background:#00cc00; }
+	.left { float:left; }
 	.right:after{  
 	    position:absolute;  
 	    content:"\00a0";  
@@ -51,9 +53,9 @@
 	    height:0px;  
 	    border-width:3px;  
 	    border-style:solid;  
-	    border-color:transparent transparent transparent #fff;  
+	    border-color:transparent transparent transparent #00cc00;  
 	    right:-6px;  
-	    top:14px;                       
+	    top:16px;                       
 	 }
 	 .left:before{  
 	    position:absolute;  
@@ -65,6 +67,6 @@
 	    border-style:solid;  
 	    border-color:transparent #fff transparent transparent;  
 	    left:-6px;  
-	    top:14px;                       
+	    top:16px;                       
 	 }
 }
