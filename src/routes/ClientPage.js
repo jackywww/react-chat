@@ -3,7 +3,22 @@ import { connect } from 'dva';
 import { Layout, Button, Input, Icon, Row, Col, Avatar } from 'antd';
 const { Header, Footer, Content } = Layout;
 import styles from './IndexPage.less';
-var data = [0,1]
+var data = [
+	{
+		message: 'aaabbbaa',
+		avatar: '',
+		dir: 'left',
+	},
+	{
+		message: 'aacccaaa',
+		avatar: '',
+		dir: 'right',
+	},	
+]
+data.push({
+	message: 'aaabbbaa',
+	dir: 'left',	
+})
 function ClientPage() {
   return (
     <div style={{ maxWidth: '680px', width: '100%', margin: '0 auto' }}>
@@ -11,20 +26,28 @@ function ClientPage() {
 			<Content style={{ position: 'fixed', width: '100%', maxWidth: '680px', top: '0', bottom: '50px', background: '#eaeaea' }}>	
 			{
 				data.map((item) => {
-				 return (
-					<Row className={ styles.margin }>
-						<Col span={4}></Col>
-						<Col span={16}><div className="send right">中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中中</div></Col>
-						<Col span={4} className={ styles.center }><Avatar size="large" shape="square" icon="user" /></Col>
-					</Row>
+					let right = (
+						<Row className={ styles.margin }>
+							<Col span={4}></Col>
+							<Col span={16}><div className="send right">{ item.message }</div></Col>
+							<Col span={4} className={ styles.center }><Avatar src={item.avatar} size="large" shape="square" icon="user" /></Col>
+						</Row>
 					)
+					let left = (
+						<Row className={ styles.margin }>
+							<Col span={4} className={ styles.center }><Avatar src={item.avatar} shape="square" size="large" icon="user" /></Col>
+							<Col span={16}><div className="send left">{ item.message }</div></Col>
+							<Col span={4}></Col>
+						</Row>
+					)
+					if(item.dir == 'left'){
+						return left
+					}else{
+						return right
+					}
+					
 				})
 			}
-			<Row className={ styles.margin }>
-				<Col span={4} className={ styles.center }><Avatar shape="square" size="large" icon="user" /></Col>
-				<Col span={16}><div className="send left">中中中中中中中中中中</div></Col>
-				<Col span={4}></Col>
-			</Row>
 			</Content>
 			<Footer style={{ position: 'fixed', width: '100%', maxWidth: '680px', height: '50px', bottom: '0', padding: '0' }}>
 				<Row gutter={8} style={{ textAlign: 'center', marginTop: '10px' }}>
