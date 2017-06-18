@@ -4,14 +4,19 @@ export default {
   namespace: 'chatlist',
   state: {
 	  value: '',
+	  data: [],
   },
-  value: '',
   reducers: {
     'send'(state, { payload: send }) {
     	if(message == ''){
-    		return [...state]
+    		return {
+    	    	value: '',
+    	    	data:[
+    	    		...state.data,
+    	    	]
+        	}
     	}
-    	return {
+    	var data = {
 	    	value: '',
 	    	data:[
 	    		...state.data,
@@ -22,9 +27,11 @@ export default {
 	    		}
 	    	]
     	}
+    	message = ''
+    	return data
     },
     'change'(state, { payload: send }) {
-	    message = send.target.value
+	    message = send.target.value 
 	    return {
 	    	data: [...state.data],
 	    	value:message 

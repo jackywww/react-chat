@@ -2,16 +2,7 @@ import dva from 'dva';
 import './index.css';
 
 // 1. Initialize
-const app = dva({
-   initialState: {
-     chatlist:{ 
-    	 data: [
-	       { send: 'dva', dir: 'left', avatar: '' },
-	       { send: 'antd', dir: 'right', avatar: '' },
-	     ],
-     }
-   },
- });
+const app = dva();
 
 // 2. Plugins
 // app.use({});
